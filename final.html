@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="fin.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Machine Learning Approach to Bandgap Tuning of Perovskite Solar Cells</h1>
-        <div class="buttons">
-            <button onclick="showLinearRegression()">Linear Regression</button>
-            <button onclick="showRandomForest()">Random Forest</button>
-            <button onclick="showNeuralNetwork()">Neural Network</button>
-            <button onclick="showComparison()">Comparison</button>
+    <div class="parent">
+        <div class = "header">
+            <h1 >Machine Learning Approach to Bandgap Tuning of Perovskite Solar Cells</h1>
+            <p>Perovskite solar cells are an exciting area of research in renewable energy due to their high efficiency and relatively low production costs.
+             One of the key factors influencing the performance of these cells is the bandgap of the perovskite material. 
+            The bandgap determines the range of light wavelengths that the material can absorb and convert into electrical energy.  
+            Bandgap tuning involves adjusting the composition of the perovskite material to optimize its bandgap for maximum solar energy absorption. 
+            By carefully selecting and combining different elements, researchers can create perovskite materials with tailored bandgaps that enhance the efficiency of solar cells.  
+            This process not only improves the power conversion efficiency but also opens up possibilities for tandem solar cells, where multiple layers with different bandgaps are stacked to capture a broader spectrum of sunlight. 
+            The ongoing advancements in bandgap tuning are paving the way for more efficient and cost-effective solar energy solutions.</p>
         </div>
-        <div id="result-container">
-            <!-- Results will be displayed here -->
+        <div class="container">
+            <h1><b>Results</b></h1>
+            <div class="buttons">
+                <button onclick="showLinearRegression()">Linear Regression</button>
+                <button onclick="showRandomForest()">Random Forest</button>
+                <button onclick="showNeuralNetwork()">Neural Network</button>
+                <button onclick="showComparison()">Comparison</button>
+            </div>
+            <div id="result-container">
+                <!-- Results will be displayed here -->
+            </div>
         </div>
     </div>
     <script src="sci.js"></script>
