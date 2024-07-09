@@ -1,6 +1,6 @@
 body {
     background-color: #f0f0f0;
-    
+     background-image: url('solar.jpg');
     background-size: cover;
     font-family: Arial, sans-serif;
     /* display: flex;
@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-    color: #333;
+    color:white;
 }
 
 .buttons {
@@ -67,4 +67,5 @@ button:hover {
     /* margin:auto; */
     text-align: center;
     width: 70%;
+    color: white;
 }
