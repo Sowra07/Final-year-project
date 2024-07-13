@@ -20,6 +20,10 @@ def route():
 
 
 # Load your dataset
+@app.route('/')
+def root():
+    return render_template('index.html')
+
 @app.route('/load_data')
 def load_data():
     data = pd.read_csv('data.csv')
@@ -47,7 +51,11 @@ def linear_regression():
     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 
     # Prepare HTML response
+<<<<<<< HEAD
     html_response = f'<h2>Linear Regression Results</h2><p>RMSE: {rmse:.3f}</p>'
+=======
+    return render_template('linear_regression.html', rmse=rmse)
+>>>>>>> 3778dab8ec50e5e11133946644a199ec257b8751
 
     return html_response
 
@@ -73,9 +81,8 @@ def random_forest():
     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 
     # Prepare HTML response
-    html_response = f'<h2>Random Forest Results</h2><p>RMSE: {rmse:.2f}</p>'
 
-    return html_response
+    return render_template('random_forest.html', rmse=rmse)
 
 # Neural Network endpoint
 @app.route('/neural_network')
@@ -111,16 +118,16 @@ def neural_network():
     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 
     # Prepare HTML response
-    html_response = f'<h2>Neural Network Results</h2><p>RMSE: {rmse:.2f}</p>'
+    
 
-    return html_response
+    return render_template('neural_network.html', rmse=rmse)
 
 # Comparison endpoint
 @app.route('/comparison')
 def comparison():
     # Implement comparison logic here
     # For simplicity, you can just return a placeholder response
-    return '<h2>Comparison Results</h2><p>Comparison results will be displayed here.</p>'
+    return render_template('comparison.html')
 
 if __name__ == '__main__':
     app.run(debug=True)  # Run the application in debug mode for development
