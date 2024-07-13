@@ -13,6 +13,11 @@ import numpy as np
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for handling cross-origin requests
+@app.route('/')
+def route():
+    return '<h2>Hello world</h2>'
+
+
 
 # Load your dataset
 @app.route('/load_data')
@@ -42,7 +47,7 @@ def linear_regression():
     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 
     # Prepare HTML response
-    html_response = f'<h2>Linear Regression Results</h2><p>RMSE: {rmse:.2f}</p>'
+    html_response = f'<h2>Linear Regression Results</h2><p>RMSE: {rmse:.3f}</p>'
 
     return html_response
 
